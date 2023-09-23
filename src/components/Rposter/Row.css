@@ -1,0 +1,33 @@
+.card{
+    min-height: 120px;
+    width: 90px;
+    margin-left: 5px;
+    border-radius: 5px;
+
+}
+/* .rail{
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;   
+} */
+.rails{
+    margin-top: 3px;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden; 
+}
+.rails::-webkit-scrollbar{
+    display:none;
+}
+h6{
+    font-size: 6px;
+    width: 80px;
+    margin-left: 5px;
+
+
+}
