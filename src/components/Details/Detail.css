@@ -3,35 +3,70 @@
     display: flex;
     border: 3px solid #eabd37;
     align-items: center;
-    margin: 20px 40px;
+    margin: 20px 100px;
+   
 }
 
 .container img{
-    max-width: 120px;
+    
+    max-width: 150px;
+    height: 200px;
     /* border: 1px solid #eabd37 ; */
     margin: 30px 20px;
     width: 100%;
     border-radius: 10px;
     filter: drop-shadow(-0.6px -0.8px 80px #cfb872);
 
+
 }
-.poster-details button {
+.poster-details{
+    margin: 10px 20px;
+}
+.buttons{
+    display: flex;
+    margin-left: 10px;
+}
+.red-btn{
+    display: flex;
+    position: relative;
     margin-top: 10px;
-    padding: 2px 4px;
-    color:#eabd37;
-    border: 0.8px #eabd37 solid;
-    background-color: transparent;
-    border-radius: 8px;
+    margin-left: 20px;
+    padding: 4px 8px;
+    color:#ffffff;
+    border: none;
+    outline: none;
+    background-color:#c81313 ;
+    border-radius: 3px;
+    gap: 3px;
+    font-size: 10px;
 }
-.poster-details button:hover {
+.yellow-btn{
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 4px 8px;
+    color:#0c0c0c;
+    border: none;
+    outline: none;
     background-color: #eabd37;
-    color: #111;
+    border-radius: 3px;
+    gap: 3px;
+    font-size: 10px;
 }
+
 .poster-details p{
+    
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 30px;
     font-size: 10px;
     color:#f9f9f9;
+    width: 400px;
 }
 .poster-details h1{
+    width: 400px;
+    display: inline-block;
     margin-bottom: 10px;
     margin-left: 18px;
     color:#eabd37;

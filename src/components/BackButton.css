@@ -1,0 +1,13 @@
+.bck-btn{
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 3px 8px;
+    color:#f2df60;
+    border: 0.8px #f2df60 solid;
+    background-color: transparent;
+    border-radius: 3px;
+    gap: 3px;
+
+}

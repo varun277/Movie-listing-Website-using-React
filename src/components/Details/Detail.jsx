@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Navbar from '../navbar/Navbar'
 import { useLocation } from 'react-router-dom';
 import './Detail.css'
+import BackButton from '../BackButton';
+import {CalendarBlank,Clock,Eye,Play} from "@phosphor-icons/react";
 
 function Detail() {
   const getdata2=localStorage.getItem('id')
@@ -21,24 +23,28 @@ function Detail() {
   const handleClick =()=>{
     setDisplayText(true)
   }
+  const playYoutube=()=>{
+    const VIDEO='-uCrUACfwpw';
+    window.location.href=`https://www.youtube.com/watch?v=${VIDEO}`;
+  }
 
 
   return (
     <div>
-     <Navbar />
+     <BackButton/>
       {
         fetchDetail.map((obj1)=>
         <div className='container' >
-        <img src={obj1['posterUrl']}  alt="posterimg" onError={(e)=>{e.target.src='https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'}} />
         <div className='poster-details'>
         <h1>{obj1['title']}</h1>
-        <p><b>Year : </b>{obj1['year']}  <b>   Runtime : </b>{obj1['runtime']} Min</p>
-        <p><b>Genres : </b>{obj1['genres'].join(", ")} </p>
-        <p><b>Director : </b>{obj1['director']}</p>
-        <p><b>Actors : </b>{obj1['actors']}</p>
-        {!displayText && <button onClick={handleClick}>Show more</button>}<br/>
-        {displayText && <p><b>Plot : </b>{obj1['plot']}</p>}
+        <p><b><CalendarBlank size={14}/>&nbsp;</b>{obj1['year']}&nbsp;&nbsp;&nbsp;<b><Clock size={14} />&nbsp; </b>{obj1['runtime']} min</p> 
+        <p><b>{obj1['genres'].join(" | ")} </b></p>
+        <p>{obj1['plot']}</p>
+        <div className='buttons'>
+          <button className='red-btn' onClick={playYoutube}><Play size={10} />Play Now</button><button className='yellow-btn' onClick={playYoutube}><Eye size={10}/>Watch Trailer</button>
         </div>
+        </div>
+        <img src={obj1['posterUrl']}  alt="posterimg" onError={(e)=>{e.target.src='https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'}} />
         </div>
         )
       }

@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function Row(props) {
         const [detail,setDetail]=useState("")
         const category1=props.category;
+        // console.log(category1)
         const movie1=props.movie;
         const FilteredMovie=movie1.filter((mov)=>
             mov['genres'].includes(category1)
@@ -19,7 +20,6 @@ function Row(props) {
           console.log(x)
           navigate("/detail",{state:x})
         }
-        console.log(detail)
   return (
     <div className='rails'>
     {
